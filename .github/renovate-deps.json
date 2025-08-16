@@ -39,8 +39,8 @@
       "matchStrings": [
         "# renovate: depName=(?<depName>\\S+)\\s+# GIT_TAG\\s+(?<currentDigest>[a-z0-9]{40}) # (?<currentValue>\\S+)"
       ],
-      "datasourceTemplate": "git-refs",
-      "depNameTemplate": "SFML/SFML",
+      "datasourceTemplate": "git-ref",
+      "depNameTemplate": "{{{depName}}}",
       "packageNameTemplate": "https://github.com/{{{depName}}}",
       "versioningTemplate": "loose"
     }
