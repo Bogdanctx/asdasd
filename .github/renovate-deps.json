@@ -29,16 +29,14 @@
       "customType": "regex",
       "description": "Update SFML commented SHA to the commit behind the tag",
       "managerFilePatterns": [
-        "CMakeLists.txt",
-        "tests/CMakeLists.txt"
+        "CMakeLists.txt"
       ],
       "matchStrings": [
         "# renovate: depName=(?<depName>\\S+)\\s+# GIT_TAG\\s+(?<currentDigest>[a-z0-9]{40}) # (?<currentValue>\\S+)"
       ],
       "datasourceTemplate": "git-refs",
       "depNameTemplate": "SFML/SFML",
-      "registryUrlTemplate": "https://github.com",
-      "packageNameTemplate": "{{{depName}}}",
+      "packageNameTemplate": "https://github.com/{{{depName}}}",
       "versioningTemplate": "loose",
       "autoReplaceStringTemplate": "{{{prefix}}}{{{newDigest}}}{{{between}}}{{{currentValue}}}{{{suffix}}}"
     }
